@@ -4,10 +4,8 @@ import ReactDOM from "react-dom";
 
 // Local Imports
 import "./index.scss";
-
-
-
-
+import "../src/scss/SpaceDescription.scss";
+import "../src/scss/SpaceBackground.scss";
 
 function App() {
 	return (
@@ -18,8 +16,6 @@ function App() {
 		 </p>
 		
 	  </div>
- 
-	  
 	);
  }
 

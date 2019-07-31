@@ -1,3 +1,5 @@
+// All styles for parent component will be housed on Index.js
+
 // Imports
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -9,8 +11,8 @@ import SpaceBackground from './SpaceBackground';
 
 
 export default function SpaceHolder() {
-	const [spaceImage, setSpaceImage] = useState([]);
-	const [imageData, setImageData] = useState([]);
+	const [spaceImage, setSpaceImage] = useState();
+	const [imageData, setImageData] = useState();
 	const [loading, setLoading] = useState(false);
 
 	// Axios Call
@@ -33,7 +35,13 @@ export default function SpaceHolder() {
 		<div className="SpaceHolder">
 			{loading && <h2>Loading Images</h2>}
 			<SpaceBackground imageURL={spaceImage}/>
-			<SpaceDescription imageData={imageData}/>
+			<div className="hoverTab">
+				<div className="showMore">
+					<h4>Show More</h4>
+					<i className="material-icons">keyboard_arrow_up</i>
+				</div>
+				<SpaceDescription imageData={imageData}/>
+			</div>
 		</div>
 	)
 
