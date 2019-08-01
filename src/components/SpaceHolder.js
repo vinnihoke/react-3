@@ -36,8 +36,8 @@ export default function SpaceHolder() {
 	return(
 		<div className="SpaceHolder">
 			{loading && <h2>Loading Images</h2>}
-			<SpaceBackground imageURL={spaceImage}/>
 			<ShowMore imageData={imageData}/>
+			<SpaceBackground imageURL={spaceImage}/>
 		</div>
 	)
 

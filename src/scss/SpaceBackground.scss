@@ -1,11 +1,41 @@
 .SpaceBackground {
 	width: 100%;
 	height: 100vh;
-	z-index: -1;
+	z-index: -3;
 	position:fixed;
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	// background-image: url('https://place-hold.it/300x300');
+}
+
+.SpaceBackgroundOverlay {
+	background: linear-gradient(237deg, #251b51, #a02298, #219388);
+	background-size: 600% 600%;
+	opacity: .2;
+	width: 100%;
+	height: 100vh;
+	-webkit-filter: contrast(4);
+	filter: contrast(6);
+	z-index: -2;
+	position:fixed;
+	-webkit-animation: AnimationName 29s ease infinite;
+	-moz-animation: AnimationName 29s ease infinite;
+	animation: AnimationName 29s ease infinite;
+
+	@-webkit-keyframes AnimationName {
+		0%{background-position:0% 71%}
+		50%{background-position:100% 30%}
+		100%{background-position:0% 71%}
+	}
+	@-moz-keyframes AnimationName {
+		0%{background-position:0% 71%}
+		50%{background-position:100% 30%}
+		100%{background-position:0% 71%}
+	}
+	@keyframes AnimationName { 
+		0%{background-position:0% 71%}
+		50%{background-position:100% 30%}
+		100%{background-position:0% 71%}
+	}
 }

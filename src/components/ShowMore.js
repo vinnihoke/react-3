@@ -9,22 +9,19 @@ import SpaceDescription from './SpaceDescription';
 import "../scss/ShowMore.scss";
 
 
-export default function ShowMoreTab({ imageData }) { 
+export default function ShowMoreTab({ imageData }) {
 	const [showWindow, setShowWindow] = useState(false);
-
-	const carrat = document.querySelector(".carrat");
-
-		while(showWindow === true && carrat.textContent === "keyboard_arrow_up") {
-			carrat.textContent = "keyboard_arrow_down";
-		} 
+	const [carrat, setCarrat] = useState(false);
 
 	return(
 			<div className="hoverTab" onMouseEnter={() => setShowWindow(true)} onMouseLeave={() => {
 				setShowWindow(false)}}>
 				<div className="showMore">
 					<div className="left">
-						<h4>Show Description</h4>
-						<i className="material-icons carrat">keyboard_arrow_up</i>
+						{showWindow === false && <h4>Hover for Information</h4>}
+						{showWindow && <h4> Mouse Away to Close</h4>}
+						{showWindow === false && <i className="material-icons">keyboard_arrow_up</i>}
+						{showWindow && <i className="material-icons">keyboard_arrow_down</i>}
 					</div>
 				</div>
 				{showWindow && <SpaceDescription imageData={imageData} />}
