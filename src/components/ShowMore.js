@@ -14,16 +14,16 @@ export default function ShowMoreTab({ imageData }) {
 
 	const carrat = document.querySelector(".carrat");
 
-	const carratToggle = () => {
-		if(showWindow === true && carrat.textContent === "keyboard_arrow_up") carrat.textContent = "keyboard_arrow_down";
-	}
+		while(showWindow === true && carrat.textContent === "keyboard_arrow_up") {
+			carrat.textContent = "keyboard_arrow_down";
+		} 
 
 	return(
 			<div className="hoverTab" onMouseEnter={() => setShowWindow(true)} onMouseLeave={() => {
 				setShowWindow(false)}}>
 				<div className="showMore">
 					<div className="left">
-						<h4>Show More</h4>
+						<h4>Show Description</h4>
 						<i className="material-icons carrat">keyboard_arrow_up</i>
 					</div>
 				</div>

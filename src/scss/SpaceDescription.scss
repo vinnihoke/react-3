@@ -2,9 +2,9 @@
 @import "./mixins.scss";
 
 .hoverWindow{
-	@include flex(column, space-between, flex-start);
+	@include flex(column, space-around, flex-start);
 	width: 90%;
 	text-align: left;
 	color: white;
-	height: 45%;
+	height: 65%;
 }
