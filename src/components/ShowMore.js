@@ -14,22 +14,13 @@ export default function ShowMoreTab({ imageData }) {
 
 	const carrat = document.querySelector(".carrat");
 
-	const handleHover = () => {
-		if(showWindow === false){
-			setShowWindow(true);
-			carratToggle();
-		} else {
-			setShowWindow(false);
-			carratToggle();
-		}
-	}
-
 	const carratToggle = () => {
 		if(showWindow === true && carrat.textContent === "keyboard_arrow_up") carrat.textContent = "keyboard_arrow_down";
 	}
 
 	return(
-			<div className="hoverTab" onMouseEnter={() => handleHover} onMouseLeave={() => handleHover}>
+			<div className="hoverTab" onMouseEnter={() => setShowWindow(true)} onMouseLeave={() => {
+				setShowWindow(false)}}>
 				<div className="showMore">
 					<div className="left">
 						<h4>Show More</h4>
