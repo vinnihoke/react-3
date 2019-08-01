@@ -2,16 +2,18 @@
 
 .hoverTab{
 	@include flex(column, center, center);
-	background-color: palevioletred;
+	background-color: #070133;
+	opacity: .80;
 	position: fixed;
 	bottom: 0;
 	right: 15px;
 	width: 400px;
 	height: 35px;
+	border-radius: 10px 10px 0px 0px;
+	transition: 300ms;
 
 	&:hover{
-		height: 100vh;
-		top: 0;
+		height: 65%;
 		@include flex(column, space-around, center);
 	}
 }
