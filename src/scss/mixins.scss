@@ -1,0 +1,29 @@
+@import '../index.scss';
+
+@mixin flex($rowWrap: row wrap, $justify: center, $align: center){
+	display: flex;
+	flex-flow: $rowWrap;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin grid-container{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+	grid-auto-rows: minmax(max-content, auto);
+	width: 100%;
+	justify-items: center;
+	align-items: center;
+	grid-template-areas:
+	"a a a a"
+	"b c d e"
+	"f g h i"
+	"j k l m"
+	"n o p q"
+	"r r s t"
+}
+
+@mixin grid($gridArea){
+	grid-area: $gridArea;
+}

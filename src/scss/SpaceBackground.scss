@@ -1,0 +1,11 @@
+.SpaceBackground {
+	width: 100%;
+	height: 100vh;
+	z-index: -1;
+	position:fixed;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	// background-image: url('https://place-hold.it/300x300');
+}
