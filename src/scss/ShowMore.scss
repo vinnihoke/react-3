@@ -1,29 +1,46 @@
 @import "./mixins.scss";
 
-.hoverTab{
-	@include flex(column, center, center);
-	background-color: #070133;
-	opacity: .80;
+// .hoverTab{
+// 	@include flex(column, center, center);
+// 	background-color: #070133;
+// 	opacity: .80;
+// 	position: fixed;
+// 	bottom: 0;
+// 	right: 15px;
+// 	width: 400px;
+// 	height: 35px;
+// 	border-radius: 10px 10px 0px 0px;
+// 	transition: 300ms;
+	
+
+// 	&:hover{
+// 		height: 65%;
+// 		@include flex(column, space-around, center);
+// 	}
+// }
+
+// .showMore{
+// 	@include flex(row wrap, space-between, center);
+// 	color: white;
+// 	width: 90%;
+
+// 	.left{
+// 		@include flex();
+// 	}
+// }
+
+button.informationFAB {
 	position: fixed;
-	bottom: 0;
-	right: 15px;
-	width: 400px;
-	height: 35px;
-	border-radius: 10px 10px 0px 0px;
-	transition: 300ms;
-
-	&:hover{
-		height: 65%;
-		@include flex(column, space-around, center);
-	}
-}
-
-.showMore{
-	@include flex(row wrap, space-between, center);
+	padding: 0;
+	bottom: 30px;
+	left: 30px;
 	color: white;
-	width: 90%;
+	background-color: palevioletred;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
 
-	.left{
-		@include flex();
+	.iconFAB{
+		font-size: 35px;
 	}
 }
