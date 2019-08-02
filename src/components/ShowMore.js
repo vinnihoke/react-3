@@ -18,10 +18,10 @@ import "../scss/ShowMore.scss";
 
 const useStyles = makeStyles({
 	list: {
-	  width: 400,
-	  display: 'flex',
-	  flexDirection: 'column',
-	  justifyContent: 'center',
+		width: 400,
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center',
 		alignItems: 'center',
 		height: '100vh',
 		backgroundColor: '#070133',

@@ -33,9 +33,17 @@ export default function SpaceHolder() {
 			
 	}, []);
 
+	const loadingStyle = {
+		color: '#070133',
+		position: 'fixed',
+		top: '50%',
+		width: '100%',
+		textAlign: 'center',
+	}
+
 	return(
 		<div className="SpaceHolder">
-			{loading && <h2>Loading Images</h2>}
+			{loading && <h2 style={loadingStyle}>Loading Images</h2>}
 			<ShowMore imageData={imageData}/>
 			<SpaceBackground imageURL={spaceImage}/>
 		</div>
