@@ -1,0 +1,10 @@
+// Test
+@import "./mixins.scss";
+
+.hoverWindow{
+	@include flex(column, space-around, flex-start);
+	width: 90%;
+	text-align: left;
+	color: white;
+	height: 65%;
+}
