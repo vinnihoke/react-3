@@ -1,6 +1,8 @@
 // Imports
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Icon from '@material-ui/core/Icon'
+
 
 // Component Imports
 import SpaceDescription from './SpaceDescription';
@@ -20,8 +22,9 @@ export default function ShowMoreTab({ imageData }) {
 					<div className="left">
 						{showWindow === false && <h4>Hover for Information</h4>}
 						{showWindow && <h4> Mouse Away to Close</h4>}
-						{showWindow === false && <i className="material-icons">keyboard_arrow_up</i>}
-						{showWindow && <i className="material-icons">keyboard_arrow_down</i>}
+						
+						{showWindow === false && <Icon>keyboard_arrow_up</Icon>}
+						{showWindow && <Icon>keyboard_arrow_down</Icon>}
 					</div>
 				</div>
 				{showWindow && <SpaceDescription imageData={imageData} />}
@@ -29,4 +32,15 @@ export default function ShowMoreTab({ imageData }) {
 	)
 }
 
+// Material UI 
 
+// import { makeStyles } from '@material-ui/core/styles';
+// import Drawer from '@material-ui/core/Drawer';
+// import Button from '@material-ui/core/Button';
+// import List from '@material-ui/core/List';
+// import Divider from '@material-ui/core/Divider';
+// import ListItem from '@material-ui/core/ListItem';
+// import ListItemIcon from '@material-ui/core/ListItemIcon';
+// import ListItemText from '@material-ui/core/ListItemText';
+
+// https://material-ui.com/components/drawers/

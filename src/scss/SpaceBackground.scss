@@ -12,11 +12,13 @@
 .SpaceBackgroundOverlay {
 	background: linear-gradient(237deg, #251b51, #a02298, #219388);
 	background-size: 600% 600%;
-	opacity: .2;
+	opacity: .25;
 	width: 100%;
 	height: 100vh;
+
 	-webkit-filter: contrast(4);
 	filter: contrast(6);
+
 	z-index: -2;
 	position:fixed;
 	-webkit-animation: AnimationName 29s ease infinite;
